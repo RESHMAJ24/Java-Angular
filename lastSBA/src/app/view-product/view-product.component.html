@@ -1,0 +1,38 @@
+
+<div class="container">
+ <div class="input-group mb-3">
+
+    <input type="text" #searchProduct (keyup)="0" class="form-control" placeholder="Search Category">
+  
+  </div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Category</th>
+          <th scope="col">Product Type</th>
+          <th scope="col">Expiry Date</th>
+        
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productService.products| searchProduct: searchProduct.value  ; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.category}}</td>
+          <td>{{product.type}}</td>
+          <td>{{product.expiryDate}}</td>
+          <td><button type="button" class="btn btn-danger" > Edit </button></td>
+          <td><button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)"> X </button></td>
+        </tr>
+       
+      </tbody>
+  
+    </table>
+</div>
+
+  

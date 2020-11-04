@@ -1,0 +1,39 @@
+<div class="container">
+    <br>
+    <br>
+    <h3>Add Product</h3>
+<div class="input-group mb-3">
+    
+    <input type="hidden" #id class="form-control" placeholder="Enter a valid id" aria-label="Username" aria-describedby="basic-addon1">
+
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Product Name</span>
+    </div>
+    <input type="text"  #name  class="form-control" placeholder="Enter a valid name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Product Category</span>
+    </div>
+    <input type="text"  #category  class="form-control" placeholder="Enter a category" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Product Type</span>
+    </div>
+    <input type="text"  #type  class="form-control" placeholder="Enter a valid name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Expiry Date</span>
+    </div>
+    <input type="date"  #expiryDate  class="form-control" placeholder="Enter a valid name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" (click)="addProduct(id.value, name.value, category.value,type.value,expiryDate.value)">Add Product</button>
+</div>
+
+</div>
